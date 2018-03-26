@@ -10,10 +10,12 @@
 		5216FCA32069178400D12E16 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216FCA22069178400D12E16 /* MockError.swift */; };
 		5216FCA920691AE000D12E16 /* RestaurantViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216FCA820691AE000D12E16 /* RestaurantViewModelItem.swift */; };
 		5216FCAB20691AF500D12E16 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216FCAA20691AF500D12E16 /* ResultTableViewCell.swift */; };
+		5216FCAD20691B0300D12E16 /* ActionStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216FCAC20691B0300D12E16 /* ActionStatusView.swift */; };
 		5216FCB020691B3100D12E16 /* UIKit+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216FCAF20691B3100D12E16 /* UIKit+Identifier.swift */; };
 		5216FCB320691B5000D12E16 /* ObserverNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216FCB220691B5000D12E16 /* ObserverNotifier.swift */; };
 		5216FCB520691B6000D12E16 /* ObserverNotificationNameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216FCB420691B6000D12E16 /* ObserverNotificationNameConstants.swift */; };
 		5216FCB820691D2600D12E16 /* RestaurantViewModelItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216FCB720691D2600D12E16 /* RestaurantViewModelItemTests.swift */; };
+		5216FCBA20691E6E00D12E16 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5216FCB920691E6E00D12E16 /* Localizable.strings */; };
 		52437BBA2068F68D00E0A378 /* MockAPIDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BB92068F68D00E0A378 /* MockAPIDetails.swift */; };
 		52437BBC2068F7B200E0A378 /* ModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BBB2068F7B200E0A378 /* ModelState.swift */; };
 		52437BBE2068FA3200E0A378 /* RestaurantDomainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BBD2068FA3200E0A378 /* RestaurantDomainItem.swift */; };
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				5216FCAA20691AF500D12E16 /* ResultTableViewCell.swift */,
+				5216FCAC20691B0300D12E16 /* ActionStatusView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				52DEF6752068EC28008FFBB2 /* Assets.xcassets */,
 				52DEF6772068EC28008FFBB2 /* LaunchScreen.storyboard */,
 				52DEF67A2068EC28008FFBB2 /* Info.plist */,
+				5216FCB920691E6E00D12E16 /* Localizable.strings */,
 			);
 			path = RestaurantSearchDemo;
 			sourceTree = "<group>";
@@ -496,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52DEF6792068EC28008FFBB2 /* LaunchScreen.storyboard in Resources */,
+				5216FCBA20691E6E00D12E16 /* Localizable.strings in Resources */,
 				52DEF6AB2068EF00008FFBB2 /* ZomatoAPI.plist in Resources */,
 				52DEF6762068EC28008FFBB2 /* Assets.xcassets in Resources */,
 				52437BC62068FDF800E0A378 /* APITokens.plist in Resources */,
@@ -542,6 +547,7 @@
 				52437BBC2068F7B200E0A378 /* ModelState.swift in Sources */,
 				52DEF6B12068EF84008FFBB2 /* ZomatoAPI.swift in Sources */,
 				52437BD4206909FF00E0A378 /* Fetch.swift in Sources */,
+				5216FCAD20691B0300D12E16 /* ActionStatusView.swift in Sources */,
 				52437BCE2069060E00E0A378 /* FetchDelegate.swift in Sources */,
 				5216FCAB20691AF500D12E16 /* ResultTableViewCell.swift in Sources */,
 				52437BC22068FDC500E0A378 /* StandardAPIHeaders.swift in Sources */,
