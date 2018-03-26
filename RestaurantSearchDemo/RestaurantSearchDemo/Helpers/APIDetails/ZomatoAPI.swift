@@ -19,7 +19,7 @@ struct ZomatoAPI: Codable, PlistDecoder {
     private let apiVersionPath: String
     private let searchPath: String
     
-    private let londonCityTypeDemoSearchQuery: String // hardcoded to a London city id & city type for demo purposes
+    private let londonCityTypeDemoSearchQuery: String // hardcoded as type city, and city is London.
     
     init() {
         self = ZomatoAPI.plistData()
