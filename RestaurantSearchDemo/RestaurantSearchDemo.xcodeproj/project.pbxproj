@@ -11,6 +11,9 @@
 		52437BBC2068F7B200E0A378 /* ModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BBB2068F7B200E0A378 /* ModelState.swift */; };
 		52437BBE2068FA3200E0A378 /* RestaurantDomainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BBD2068FA3200E0A378 /* RestaurantDomainItem.swift */; };
 		52437BC02068FA9B00E0A378 /* mock-api-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 52437BBF2068FA9B00E0A378 /* mock-api-response.json */; };
+		52437BC22068FDC500E0A378 /* StandardAPIHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BC12068FDC500E0A378 /* StandardAPIHeaders.swift */; };
+		52437BC42068FDE400E0A378 /* APITokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BC32068FDE400E0A378 /* APITokens.swift */; };
+		52437BC62068FDF800E0A378 /* APITokens.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52437BC52068FDF800E0A378 /* APITokens.plist */; };
 		52DEF66F2068EC28008FFBB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DEF66E2068EC28008FFBB2 /* AppDelegate.swift */; };
 		52DEF6742068EC28008FFBB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DEF6722068EC28008FFBB2 /* Main.storyboard */; };
 		52DEF6762068EC28008FFBB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DEF6752068EC28008FFBB2 /* Assets.xcassets */; };
@@ -50,6 +53,9 @@
 		52437BBB2068F7B200E0A378 /* ModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelState.swift; sourceTree = "<group>"; };
 		52437BBD2068FA3200E0A378 /* RestaurantDomainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDomainItem.swift; sourceTree = "<group>"; };
 		52437BBF2068FA9B00E0A378 /* mock-api-response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "mock-api-response.json"; sourceTree = "<group>"; };
+		52437BC12068FDC500E0A378 /* StandardAPIHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardAPIHeaders.swift; sourceTree = "<group>"; };
+		52437BC32068FDE400E0A378 /* APITokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITokens.swift; sourceTree = "<group>"; };
+		52437BC52068FDF800E0A378 /* APITokens.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APITokens.plist; sourceTree = "<group>"; };
 		52DEF66B2068EC28008FFBB2 /* RestaurantSearchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantSearchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DEF66E2068EC28008FFBB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52DEF6732068EC28008FFBB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -218,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				52DEF6AA2068EF00008FFBB2 /* ZomatoAPI.plist */,
+				52437BC52068FDF800E0A378 /* APITokens.plist */,
 			);
 			path = APIData;
 			sourceTree = "<group>";
@@ -241,9 +248,9 @@
 		52DEF6AF2068EF6D008FFBB2 /* APIDetails */ = {
 			isa = PBXGroup;
 			children = (
-				52DEF6B62068F018008FFBB2 /* GenericAPISupport */,
 				52DEF6A92068EEE9008FFBB2 /* APIData */,
 				52DEF6B02068EF84008FFBB2 /* ZomatoAPI.swift */,
+				52DEF6B62068F018008FFBB2 /* GenericAPISupport */,
 			);
 			path = APIDetails;
 			sourceTree = "<group>";
@@ -253,6 +260,8 @@
 			children = (
 				52DEF6B72068F028008FFBB2 /* APIDetails.swift */,
 				52DEF6B92068F11C008FFBB2 /* APIDetailsErrors.swift */,
+				52437BC12068FDC500E0A378 /* StandardAPIHeaders.swift */,
+				52437BC32068FDE400E0A378 /* APITokens.swift */,
 			);
 			path = GenericAPISupport;
 			sourceTree = "<group>";
@@ -383,6 +392,7 @@
 				52DEF6792068EC28008FFBB2 /* LaunchScreen.storyboard in Resources */,
 				52DEF6AB2068EF00008FFBB2 /* ZomatoAPI.plist in Resources */,
 				52DEF6762068EC28008FFBB2 /* Assets.xcassets in Resources */,
+				52437BC62068FDF800E0A378 /* APITokens.plist in Resources */,
 				52DEF6742068EC28008FFBB2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,10 +423,12 @@
 				52DEF6BA2068F11C008FFBB2 /* APIDetailsErrors.swift in Sources */,
 				52DEF6B82068F028008FFBB2 /* APIDetails.swift in Sources */,
 				52DEF66F2068EC28008FFBB2 /* AppDelegate.swift in Sources */,
+				52437BC42068FDE400E0A378 /* APITokens.swift in Sources */,
 				52437BBE2068FA3200E0A378 /* RestaurantDomainItem.swift in Sources */,
 				52DEF6A82068EDD6008FFBB2 /* Restaurants.swift in Sources */,
 				52437BBC2068F7B200E0A378 /* ModelState.swift in Sources */,
 				52DEF6B12068EF84008FFBB2 /* ZomatoAPI.swift in Sources */,
+				52437BC22068FDC500E0A378 /* StandardAPIHeaders.swift in Sources */,
 				52DEF6A32068ED67008FFBB2 /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

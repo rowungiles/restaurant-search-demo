@@ -14,7 +14,7 @@ protocol RestaurantsInterface {
     func fetchRestaurants(with query: String?)
 }
 
-final class Restaurants {
+final class Restaurants: RestaurantsInterface {
 
     private(set) var domainModel: ModelState<[RestaurantSearch.RestaurantDomainItem]>?
         
@@ -26,9 +26,9 @@ final class Restaurants {
         self.apiDetails = apiDetails
     }
         
-    func fetchRestaurants() {
+    func fetchRestaurants(with query: String?) {
         do {
-            let url = try apiDetails.urlWithQuery()
+            let url = try apiDetails.urlWithQuery(query)
             networking.cancelFetch() // mark an inflight fetch as cancelled before starting a new fetch
             networking.fetchData(for: url)
             

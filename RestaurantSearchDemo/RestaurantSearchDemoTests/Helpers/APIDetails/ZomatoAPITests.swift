@@ -11,24 +11,37 @@ import XCTest
 
 final class ZomatoAPITests: XCTestCase {
     
-    func test_WhenURLWithQueryCalled_ThenReturnsURL() {
-        let zomato = ZomatoAPI()
-
-        XCTAssertNoThrow(try zomato.urlWithQuery())
+    private var zomato: ZomatoAPI!
+    
+    override func setUp() {
+        super.setUp()
         
-        let url = try? zomato.urlWithQuery()
+        zomato = ZomatoAPI()
+    }
+    
+    func test_GivenQueryString_WhenURLWithQueryCalled_ThenReturnsURL() {
+        let url = try? zomato.urlWithQuery("")
         XCTAssertNotNil(url)
     }
     
+    func test_GivenNoQueryString_WhenURLWithQueryCalled_ThenThrows() {
+        XCTAssertThrowsError(try zomato.urlWithQuery(nil))
+    }
+    
     func test_WhenInitZomatoAPI_ThenInitsWithDataFromPlist() {
-        let zomato = ZomatoAPI()
-        
-        let url = try! zomato.urlWithQuery()
+        let url = try! zomato.urlWithQuery("test")
         let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
         
         XCTAssertTrue(components?.scheme == "https")
         XCTAssertTrue(components?.host == "developers.zomato.com")
         XCTAssertTrue(components?.path == "/api/v2.1/search")
-        XCTAssertTrue(components?.query == "entity_id=61&entity_type=city&q=")
+        XCTAssertTrue(components?.query == "entity_id=61&entity_type=city&q=test")
+    }
+    
+    func test_WhenAdditionalHeadersCalled_ThenReturnsAdditionalHeaders() {
+        let headers = zomato.additionalHeaders()
+        
+        XCTAssertTrue(headers?[StandardAPIHeaders.accept] as? String == StandardAPIHeaders.applicationJson)
+        XCTAssertNotNil(headers?["user-key"] as? String)
     }
 }

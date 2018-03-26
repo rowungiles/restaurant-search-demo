@@ -10,7 +10,6 @@ import Foundation
 @testable import RestaurantSearchDemo
 
 struct MockAPIDetails: APIDetails {
-    
     enum State {
         case success
         case failure
@@ -22,12 +21,16 @@ struct MockAPIDetails: APIDetails {
         self.state = state
     }
     
-    func urlWithQuery() throws -> URL {
+    func urlWithQuery(_ query: String?) throws -> URL {
         switch state {
         case .success:
             return URL(string: "https://zomato.com")!
         case .failure:
             throw APIDetailsErrors.invalidURL
         }
+    }
+    
+    func additionalHeaders() -> [AnyHashable : Any]? {
+        return nil
     }
 }

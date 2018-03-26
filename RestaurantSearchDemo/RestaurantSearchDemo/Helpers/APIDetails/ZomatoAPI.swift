@@ -28,14 +28,27 @@ struct ZomatoAPI: Codable, PlistDecoder {
 
 extension ZomatoAPI: APIDetails {
     
-    func urlWithQuery() throws -> URL {
+    func urlWithQuery(_ query: String?) throws -> URL {
+        guard let query = query?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+            throw APIDetailsErrors.missingQuery
+        }
+        
         let baseComponentsURLString = baseURL + apiPath + apiVersionPath + searchPath + londonCityTypeDemoSearchQuery
-        let urlString = baseComponentsURLString
+        let urlString = baseComponentsURLString + query
         
         guard let url = URL(string: urlString) else {
             throw APIDetailsErrors.invalidURL
         }
         
         return url
+    }
+    
+    func additionalHeaders() -> [AnyHashable: Any]? {
+        let apiTokens = APITokens()
+        
+        return [
+            StandardAPIHeaders.accept: StandardAPIHeaders.applicationJson,
+            APIConstants.authorisation: apiTokens.zomato
+        ]
     }
 }

@@ -24,7 +24,7 @@ final class RestaurantsTests: XCTestCase {
     }
 
     func test_WhenFetchRestaurantsCalled_ThenCallIsMadeToDataProviderToCancel() {
-        restaurants.fetchRestaurants()
+        restaurants.fetchRestaurants(with: "")
         
         XCTAssertTrue(mockedNetworking.cancelFetchCalled == 1)
     }
@@ -33,9 +33,9 @@ final class RestaurantsTests: XCTestCase {
         let apiDetails = ZomatoAPI()
         
         do {
-            let expectedURL = try apiDetails.urlWithQuery()
+            let expectedURL = try apiDetails.urlWithQuery("")
             restaurants = Restaurants(networking: mockedNetworking, apiDetails: apiDetails)
-            restaurants.fetchRestaurants()
+            restaurants.fetchRestaurants(with: "")
             
             XCTAssertTrue(mockedNetworking.fetchDataCalled == 1)
             XCTAssertTrue(mockedNetworking.capturedURL?.absoluteString == expectedURL.absoluteString)
@@ -49,7 +49,7 @@ final class RestaurantsTests: XCTestCase {
         mockedNetworking = MockNetworking()
         restaurants = Restaurants(networking: mockedNetworking, apiDetails: mockedAPIDetails)
         
-        restaurants.fetchRestaurants()
+        restaurants.fetchRestaurants(with: "")
         
         if case .failure(_)? = restaurants.domainModel {
             XCTAssertTrue(true)
