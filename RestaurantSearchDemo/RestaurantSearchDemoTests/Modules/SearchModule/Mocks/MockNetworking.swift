@@ -13,12 +13,14 @@ final class MockNetworking: NetworkingInterface {
 
     var fetchDataCalled = 0
     var capturedURL: URL?
+    var capturedAdditionalHeaders: [AnyHashable: Any]?
     
     var cancelFetchCalled = 0
     
-    func fetchData(for url: URL) {
+    func fetchData(for url: URL, additionalHeaders: [AnyHashable: Any]?) {
         fetchDataCalled += 1
         capturedURL = url
+        capturedAdditionalHeaders = additionalHeaders
     }
     
     func cancelFetch() {

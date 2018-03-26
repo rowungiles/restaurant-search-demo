@@ -29,7 +29,7 @@ final class RestaurantsTests: XCTestCase {
         XCTAssertTrue(mockedNetworking.cancelFetchCalled == 1)
     }
     
-    func test_WhenFetchRestaurantsCalled_ThenCallIsMadeToDataProviderZomatoAPIURL() {
+    func test_WhenFetchRestaurantsCalled_ThenCallIsMadeToDataProviderWithZomatoAPIURL() {
         let apiDetails = ZomatoAPI()
         
         do {
@@ -42,6 +42,22 @@ final class RestaurantsTests: XCTestCase {
         } catch {
             XCTFail(error.localizedDescription)
         }
+    }
+    
+    func test_WhenFetchRestaurantsCalled_ThenCallIsMadeToDataProviderWithZomatoAPIAdditionalHeaders() {
+        let apiDetails = ZomatoAPI()
+        
+        let expectedHeaders = apiDetails.additionalHeaders()
+        restaurants = Restaurants(networking: mockedNetworking, apiDetails: apiDetails)
+        restaurants.fetchRestaurants(with: "")
+        guard let expectedValues = expectedHeaders?.values.flatMap({ $0 as? String }),
+            let capturedValues = mockedNetworking.capturedAdditionalHeaders?.values.flatMap({ $0 as? String }) else {
+                return XCTFail("expected additional header values")
+        }
+        
+        XCTAssertTrue(mockedNetworking.fetchDataCalled == 1)
+        XCTAssertTrue(expectedValues == capturedValues)
+        XCTAssertTrue(mockedNetworking.capturedAdditionalHeaders?.keys == expectedHeaders?.keys)
     }
     
     func test_GivenInvalidURL_WhenFetchRestaurantsCalled_ThenModelIsMarkedAsFailure() {

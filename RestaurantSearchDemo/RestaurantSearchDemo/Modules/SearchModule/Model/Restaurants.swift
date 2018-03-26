@@ -30,7 +30,7 @@ final class Restaurants: RestaurantsInterface {
         do {
             let url = try apiDetails.urlWithQuery(query)
             networking.cancelFetch() // mark an inflight fetch as cancelled before starting a new fetch
-            networking.fetchData(for: url)
+            networking.fetchData(for: url, additionalHeaders: apiDetails.additionalHeaders())
             
         } catch {
             domainModel = .failure(error)

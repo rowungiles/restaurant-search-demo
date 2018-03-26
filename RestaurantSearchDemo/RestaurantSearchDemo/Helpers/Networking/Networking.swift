@@ -9,6 +9,6 @@
 import Foundation
 
 protocol NetworkingInterface {
-    func fetchData(for url: URL)
+    func fetchData(for url: URL, additionalHeaders: [AnyHashable: Any]?)
     func cancelFetch()
 }
