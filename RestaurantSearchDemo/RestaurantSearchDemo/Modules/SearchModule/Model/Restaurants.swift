@@ -25,7 +25,8 @@ final class Restaurants: RestaurantsInterface, ObserverNotifier {
             notifyObserverOfChange()
         }
     }
-        
+    
+    // Networking implementation detail
     private var networking: NetworkingInterface
     private var apiDetails: APIDetails
     
@@ -33,7 +34,10 @@ final class Restaurants: RestaurantsInterface, ObserverNotifier {
         self.networking = networking
         self.apiDetails = apiDetails
     }
-        
+}
+
+extension Restaurants {
+    
     func fetchRestaurants(with query: String?) {
         do {
             let url = try apiDetails.urlWithQuery(query)
@@ -46,7 +50,7 @@ final class Restaurants: RestaurantsInterface, ObserverNotifier {
     }
 }
 
-extension Restaurants {
+extension Restaurants: FetchDelegate {
     
     func successfulFetch(data: Data?) throws -> [RestaurantSearch.RestaurantDomainItem] {
         if let data = data {

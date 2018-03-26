@@ -12,8 +12,8 @@ struct RestaurantViewModelItem {
     let title: String
     let description: String
     
-    init(domainModel: RestaurantSearch.RestaurantDomainItem) {
-        self.title = domainModel.name
-        self.description = domainModel.cuisines
+    init(domainItem: RestaurantSearch.RestaurantDomainItem) {
+        self.title = domainItem.name
+        self.description = domainItem.cuisines
     }
 }
