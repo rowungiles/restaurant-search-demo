@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5216FCA32069178400D12E16 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216FCA22069178400D12E16 /* MockError.swift */; };
+		5216FCA620691AC300D12E16 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216FCA520691AC300D12E16 /* ResultViewController.swift */; };
 		5216FCA920691AE000D12E16 /* RestaurantViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216FCA820691AE000D12E16 /* RestaurantViewModelItem.swift */; };
 		5216FCAB20691AF500D12E16 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216FCAA20691AF500D12E16 /* ResultTableViewCell.swift */; };
 		5216FCAD20691B0300D12E16 /* ActionStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216FCAC20691B0300D12E16 /* ActionStatusView.swift */; };
@@ -16,6 +17,7 @@
 		5216FCB520691B6000D12E16 /* ObserverNotificationNameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216FCB420691B6000D12E16 /* ObserverNotificationNameConstants.swift */; };
 		5216FCB820691D2600D12E16 /* RestaurantViewModelItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216FCB720691D2600D12E16 /* RestaurantViewModelItemTests.swift */; };
 		5216FCBA20691E6E00D12E16 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5216FCB920691E6E00D12E16 /* Localizable.strings */; };
+		5216FCBC20691E9E00D12E16 /* SearchModuleLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216FCBB20691E9E00D12E16 /* SearchModuleLauncher.swift */; };
 		52437BBA2068F68D00E0A378 /* MockAPIDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BB92068F68D00E0A378 /* MockAPIDetails.swift */; };
 		52437BBC2068F7B200E0A378 /* ModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BBB2068F7B200E0A378 /* ModelState.swift */; };
 		52437BBE2068FA3200E0A378 /* RestaurantDomainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BBD2068FA3200E0A378 /* RestaurantDomainItem.swift */; };
@@ -146,6 +148,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5216FCA420691AAB00D12E16 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5216FCA520691AC300D12E16 /* ResultViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		5216FCA720691AD000D12E16 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,7 +323,9 @@
 			isa = PBXGroup;
 			children = (
 				5216FCA720691AD000D12E16 /* View */,
+				5216FCA420691AAB00D12E16 /* Controller */,
 				52DEF6A62068EDCE008FFBB2 /* Model */,
+				5216FCBB20691E9E00D12E16 /* SearchModuleLauncher.swift */,
 			);
 			path = SearchModule;
 			sourceTree = "<group>";
@@ -542,6 +554,7 @@
 				52DEF6A82068EDD6008FFBB2 /* Restaurants.swift in Sources */,
 				5216FCB020691B3100D12E16 /* UIKit+Identifier.swift in Sources */,
 				5216FCB320691B5000D12E16 /* ObserverNotifier.swift in Sources */,
+				5216FCA620691AC300D12E16 /* ResultViewController.swift in Sources */,
 				52437BDB2069101E00E0A378 /* Foundation+URLSession.swift in Sources */,
 				52437BD02069083900E0A378 /* FetchError.swift in Sources */,
 				52437BBC2068F7B200E0A378 /* ModelState.swift in Sources */,
@@ -549,6 +562,7 @@
 				52437BD4206909FF00E0A378 /* Fetch.swift in Sources */,
 				5216FCAD20691B0300D12E16 /* ActionStatusView.swift in Sources */,
 				52437BCE2069060E00E0A378 /* FetchDelegate.swift in Sources */,
+				5216FCBC20691E9E00D12E16 /* SearchModuleLauncher.swift in Sources */,
 				5216FCAB20691AF500D12E16 /* ResultTableViewCell.swift in Sources */,
 				52437BC22068FDC500E0A378 /* StandardAPIHeaders.swift in Sources */,
 				5216FCA920691AE000D12E16 /* RestaurantViewModelItem.swift in Sources */,
