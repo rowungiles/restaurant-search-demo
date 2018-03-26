@@ -2,10 +2,11 @@
 
 ## Setup
 The results are powered by the Zomato API. [You'll need a token](https://developers.zomato.com/api#headline2). Put that token into the "zomato" dictionary value in:
-`./restaurant-search-demo/RestaurantSearchDemo/RestaurantSearchDemo/Helpers/APIDetails/APIData/APITokens.plist`
+`./restaurant-search-demo/RestaurantSearchDemo/Helpers/APIDetails/APIData/APITokens.plist`
 
 ## Overview:
-The app lets you search for a location name - returns restaurants for that location.
+The app lets you search for a location name (e.g. Camden, Clapham) - it renders the returned restaurants for that location.
+
 
 ## Dev notes:
 - No automation tests on ViewLayer due to time constraints
