@@ -32,13 +32,16 @@ final class RestaurantsTests: XCTestCase {
     func test_WhenFetchRestaurantsCalled_ThenCallIsMadeToDataProviderZomatoAPIURL() {
         let apiDetails = ZomatoAPI()
         
-        let expectedURL = try! apiDetails.urlWithQuery()
-        
-        restaurants = Restaurants(networking: mockedNetworking, apiDetails: apiDetails)
-        restaurants.fetchRestaurants()
-        
-        XCTAssertTrue(mockedNetworking.fetchDataCalled == 1)
-        XCTAssertTrue(mockedNetworking.capturedURL?.absoluteString == expectedURL.absoluteString)
+        do {
+            let expectedURL = try apiDetails.urlWithQuery()
+            restaurants = Restaurants(networking: mockedNetworking, apiDetails: apiDetails)
+            restaurants.fetchRestaurants()
+            
+            XCTAssertTrue(mockedNetworking.fetchDataCalled == 1)
+            XCTAssertTrue(mockedNetworking.capturedURL?.absoluteString == expectedURL.absoluteString)
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
     }
     
     func test_GivenInvalidURL_WhenFetchRestaurantsCalled_ThenModelIsMarkedAsFailure() {
@@ -48,7 +51,39 @@ final class RestaurantsTests: XCTestCase {
         
         restaurants.fetchRestaurants()
         
-        if case .failure(let _)? = restaurants.domainModel {
+        if case .failure(_)? = restaurants.domainModel {
+            XCTAssertTrue(true)
+        } else {
+            XCTFail()
+        }
+    }
+    
+    func test_GivenSuccess_WhenSuccessfulFetchCalled_ThenReturnsRestaurantItems() {
+        do {
+            let path = Bundle(for: RestaurantsTests.self).path(forResource: "mock-api-response", ofType: "json")!
+            let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+            let result = try restaurants.successfulFetch(data: data)
+        
+            XCTAssertTrue(result.count == 1)
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+    
+    func test_GivenSuccessButNilData_WhenSuccessfulFetchCalled_ThenReturnsEmptyRestaurantItems() {
+        do {
+            let result = try restaurants.successfulFetch(data: nil)
+            
+            XCTAssertTrue(result.count == 0)
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+    
+    func test_WhenDataFetchCompleteCalled_ThenModelIsMarkedAsSuccess() {
+        restaurants.dataFetchComplete(result: .success([]))
+        
+        if case .success(_)? = restaurants.domainModel {
             XCTAssertTrue(true)
         } else {
             XCTFail()

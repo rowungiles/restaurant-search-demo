@@ -9,15 +9,14 @@
 import Foundation
 
 protocol RestaurantsInterface {
-    var domainModel: ModelState<[Any]>? { get }
+    var domainModel: ModelState<[RestaurantSearch.RestaurantDomainItem]>? { get }
     
     func fetchRestaurants(with query: String?)
-    func cancelFetch()
 }
 
 final class Restaurants {
 
-    private(set) var domainModel: ModelState<[Any]>?
+    private(set) var domainModel: ModelState<[RestaurantSearch.RestaurantDomainItem]>?
         
     private var networking: NetworkingInterface
     private var apiDetails: APIDetails
@@ -30,11 +29,27 @@ final class Restaurants {
     func fetchRestaurants() {
         do {
             let url = try apiDetails.urlWithQuery()
-            networking.cancelFetch()
+            networking.cancelFetch() // mark an inflight fetch as cancelled before starting a new fetch
             networking.fetchData(for: url)
             
         } catch {
             domainModel = .failure(error)
         }
+    }
+}
+
+extension Restaurants {
+    
+    func successfulFetch(data: Data?) throws -> [RestaurantSearch.RestaurantDomainItem] {
+        if let data = data {
+            let response = try JSONDecoder().decode(RestaurantSearch.self, from: data)
+            return response.restaurants.flatMap({ $0.values })
+        } else {
+            return [RestaurantSearch.RestaurantDomainItem]()
+        }
+    }
+    
+    func dataFetchComplete(result: ModelState<[RestaurantSearch.RestaurantDomainItem]>) {
+        self.domainModel = result
     }
 }

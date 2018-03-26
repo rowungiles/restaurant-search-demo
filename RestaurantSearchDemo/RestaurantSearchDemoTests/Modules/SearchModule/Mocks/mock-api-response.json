@@ -1,0 +1,51 @@
+{
+    "results_found": 258,
+    "results_start": 0,
+    "results_shown": 1,
+    "restaurants": [
+      {
+        "restaurant": {
+          "R": {
+            "res_id": 6103688
+          },
+          "apikey": "0128be1f3f68491b9386a8a9e2780991",
+          "id": "6103688",
+          "name": "Camden Food Co.",
+          "url": "https://www.zomato.com/london/camden-food-co-euston?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+          "location": {
+            "address": "Euston Station, Euston, London NW1 2AE",
+            "locality": "Euston Road, Euston",
+            "city": "London",
+            "city_id": 61,
+            "latitude": "51.5281850000",
+            "longitude": "-0.1338910000",
+            "zipcode": "NW1 2AE",
+            "country_id": 215,
+            "locality_verbose": "Euston Road, Euston, London"
+          },
+          "switch_to_order_menu": 0,
+          "cuisines": "Healthy Food, Cafe",
+          "average_cost_for_two": 10,
+          "price_range": 1,
+          "currency": "£",
+          "offers": [],
+          "thumb": "",
+          "user_rating": {
+            "aggregate_rating": "2.6",
+            "rating_text": "Average",
+            "rating_color": "FFBA00",
+            "votes": "10"
+          },
+          "photos_url": "https://www.zomato.com/london/camden-food-co-euston/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+          "menu_url": "https://www.zomato.com/london/camden-food-co-euston/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+          "featured_image": "",
+          "has_online_delivery": 0,
+          "is_delivering_now": 0,
+          "deeplink": "zomato://restaurant/6103688",
+          "has_table_booking": 0,
+          "events_url": "https://www.zomato.com/london/camden-food-co-euston/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+          "establishment_types": []
+        }
+      }
+    ]
+  }
