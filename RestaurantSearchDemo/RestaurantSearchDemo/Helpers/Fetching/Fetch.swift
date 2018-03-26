@@ -16,18 +16,26 @@ protocol Fetch {
 extension Fetch {
     
     func successResponse(data: Data?) -> ModelState<Object> {
+        let result: ModelState<Object>
+        
         do {
-            return try .success(successfulFetch(data: data))
+            result = try .success(successfulFetch(data: data))
         } catch {
-            return .failure(error)
+            result = .failure(error)
         }
+        
+        return result
     }
     
     func failureResponse(error: Error?) -> ModelState<Object> {
+        let result: ModelState<Object>
+        
         if let error = error {
-            return .failure(error)
+            result = .failure(error)
         } else {
-            return .failure(FetchError.unknownError)
+            result = .failure(FetchError.unknownError)
         }
+        
+        return result
     }
 }
