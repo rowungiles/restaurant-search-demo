@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5216FCA32069178400D12E16 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216FCA22069178400D12E16 /* MockError.swift */; };
+		5216FCB320691B5000D12E16 /* ObserverNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216FCB220691B5000D12E16 /* ObserverNotifier.swift */; };
+		5216FCB520691B6000D12E16 /* ObserverNotificationNameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216FCB420691B6000D12E16 /* ObserverNotificationNameConstants.swift */; };
 		52437BBA2068F68D00E0A378 /* MockAPIDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BB92068F68D00E0A378 /* MockAPIDetails.swift */; };
 		52437BBC2068F7B200E0A378 /* ModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BBB2068F7B200E0A378 /* ModelState.swift */; };
 		52437BBE2068FA3200E0A378 /* RestaurantDomainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BBD2068FA3200E0A378 /* RestaurantDomainItem.swift */; };
@@ -62,6 +64,8 @@
 
 /* Begin PBXFileReference section */
 		5216FCA22069178400D12E16 /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
+		5216FCB220691B5000D12E16 /* ObserverNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverNotifier.swift; sourceTree = "<group>"; };
+		5216FCB420691B6000D12E16 /* ObserverNotificationNameConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverNotificationNameConstants.swift; sourceTree = "<group>"; };
 		52437BB92068F68D00E0A378 /* MockAPIDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIDetails.swift; sourceTree = "<group>"; };
 		52437BBB2068F7B200E0A378 /* ModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelState.swift; sourceTree = "<group>"; };
 		52437BBD2068FA3200E0A378 /* RestaurantDomainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDomainItem.swift; sourceTree = "<group>"; };
@@ -128,6 +132,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5216FCB120691B4600D12E16 /* Observer */ = {
+			isa = PBXGroup;
+			children = (
+				5216FCB220691B5000D12E16 /* ObserverNotifier.swift */,
+				5216FCB420691B6000D12E16 /* ObserverNotificationNameConstants.swift */,
+			);
+			path = Observer;
+			sourceTree = "<group>";
+		};
 		52437BC72069051B00E0A378 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +248,7 @@
 		52DEF6A02068ED51008FFBB2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				5216FCB120691B4600D12E16 /* Observer */,
 				52437BCC2069060100E0A378 /* Fetching */,
 				52DEF6AF2068EF6D008FFBB2 /* APIDetails */,
 				52DEF6A12068ED5E008FFBB2 /* Networking */,
@@ -483,11 +497,13 @@
 				52DEF6B52068EFEC008FFBB2 /* PlistDecoder.swift in Sources */,
 				52DEF6BA2068F11C008FFBB2 /* APIDetailsErrors.swift in Sources */,
 				52DEF6B82068F028008FFBB2 /* APIDetails.swift in Sources */,
+				5216FCB520691B6000D12E16 /* ObserverNotificationNameConstants.swift in Sources */,
 				52DEF66F2068EC28008FFBB2 /* AppDelegate.swift in Sources */,
 				52437BDD2069114300E0A378 /* Foundation+URLSessionDataTask.swift in Sources */,
 				52437BC42068FDE400E0A378 /* APITokens.swift in Sources */,
 				52437BBE2068FA3200E0A378 /* RestaurantDomainItem.swift in Sources */,
 				52DEF6A82068EDD6008FFBB2 /* Restaurants.swift in Sources */,
+				5216FCB320691B5000D12E16 /* ObserverNotifier.swift in Sources */,
 				52437BDB2069101E00E0A378 /* Foundation+URLSession.swift in Sources */,
 				52437BD02069083900E0A378 /* FetchError.swift in Sources */,
 				52437BBC2068F7B200E0A378 /* ModelState.swift in Sources */,

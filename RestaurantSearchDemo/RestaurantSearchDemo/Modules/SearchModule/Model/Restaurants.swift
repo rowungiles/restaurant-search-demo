@@ -12,11 +12,19 @@ protocol RestaurantsInterface {
     var domainModel: ModelState<[RestaurantSearch.RestaurantDomainItem]>? { get }
     
     func fetchRestaurants(with query: String?)
+    
+    func registerChangeObserver(_ object: NSObject, onChange: Selector)
 }
 
-final class Restaurants: RestaurantsInterface {
+final class Restaurants: RestaurantsInterface, ObserverNotifier {
 
-    private(set) var domainModel: ModelState<[RestaurantSearch.RestaurantDomainItem]>?
+    // ObserverNotifier implementation detail
+    static let ChangeNotificationName = ObserverNotificationNameConstants.modelChangedNotificationName(for: Restaurants.self)
+    private(set) var domainModel: ModelState<[RestaurantSearch.RestaurantDomainItem]>? {
+        didSet {
+            notifyObserverOfChange()
+        }
+    }
         
     private var networking: NetworkingInterface
     private var apiDetails: APIDetails
