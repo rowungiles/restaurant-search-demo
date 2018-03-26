@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5216FCA32069178400D12E16 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5216FCA22069178400D12E16 /* MockError.swift */; };
 		52437BBA2068F68D00E0A378 /* MockAPIDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BB92068F68D00E0A378 /* MockAPIDetails.swift */; };
 		52437BBC2068F7B200E0A378 /* ModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BBB2068F7B200E0A378 /* ModelState.swift */; };
 		52437BBE2068FA3200E0A378 /* RestaurantDomainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BBD2068FA3200E0A378 /* RestaurantDomainItem.swift */; };
@@ -14,6 +15,17 @@
 		52437BC22068FDC500E0A378 /* StandardAPIHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BC12068FDC500E0A378 /* StandardAPIHeaders.swift */; };
 		52437BC42068FDE400E0A378 /* APITokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BC32068FDE400E0A378 /* APITokens.swift */; };
 		52437BC62068FDF800E0A378 /* APITokens.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52437BC52068FDF800E0A378 /* APITokens.plist */; };
+		52437BC92069052800E0A378 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BC82069052800E0A378 /* NetworkingTests.swift */; };
+		52437BCB206905E700E0A378 /* MockNetworkingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BCA206905E700E0A378 /* MockNetworkingDelegate.swift */; };
+		52437BCE2069060E00E0A378 /* FetchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BCD2069060E00E0A378 /* FetchDelegate.swift */; };
+		52437BD02069083900E0A378 /* FetchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BCF2069083900E0A378 /* FetchError.swift */; };
+		52437BD22069089A00E0A378 /* MockJSONData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BD12069089A00E0A378 /* MockJSONData.swift */; };
+		52437BD4206909FF00E0A378 /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BD3206909FF00E0A378 /* Fetch.swift */; };
+		52437BD620690D6400E0A378 /* mock-api-incorrect-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 52437BD520690CCE00E0A378 /* mock-api-incorrect-response.json */; };
+		52437BD920690E9700E0A378 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BD820690E9700E0A378 /* MockURLSession.swift */; };
+		52437BDB2069101E00E0A378 /* Foundation+URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BDA2069101E00E0A378 /* Foundation+URLSession.swift */; };
+		52437BDD2069114300E0A378 /* Foundation+URLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BDC2069114300E0A378 /* Foundation+URLSessionDataTask.swift */; };
+		52437BDF206911CF00E0A378 /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BDE206911CF00E0A378 /* MockURLSessionDataTask.swift */; };
 		52DEF66F2068EC28008FFBB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DEF66E2068EC28008FFBB2 /* AppDelegate.swift */; };
 		52DEF6742068EC28008FFBB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DEF6722068EC28008FFBB2 /* Main.storyboard */; };
 		52DEF6762068EC28008FFBB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DEF6752068EC28008FFBB2 /* Assets.xcassets */; };
@@ -49,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5216FCA22069178400D12E16 /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
 		52437BB92068F68D00E0A378 /* MockAPIDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIDetails.swift; sourceTree = "<group>"; };
 		52437BBB2068F7B200E0A378 /* ModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelState.swift; sourceTree = "<group>"; };
 		52437BBD2068FA3200E0A378 /* RestaurantDomainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDomainItem.swift; sourceTree = "<group>"; };
@@ -56,6 +69,17 @@
 		52437BC12068FDC500E0A378 /* StandardAPIHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardAPIHeaders.swift; sourceTree = "<group>"; };
 		52437BC32068FDE400E0A378 /* APITokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITokens.swift; sourceTree = "<group>"; };
 		52437BC52068FDF800E0A378 /* APITokens.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APITokens.plist; sourceTree = "<group>"; };
+		52437BC82069052800E0A378 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
+		52437BCA206905E700E0A378 /* MockNetworkingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkingDelegate.swift; sourceTree = "<group>"; };
+		52437BCD2069060E00E0A378 /* FetchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDelegate.swift; sourceTree = "<group>"; };
+		52437BCF2069083900E0A378 /* FetchError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchError.swift; sourceTree = "<group>"; };
+		52437BD12069089A00E0A378 /* MockJSONData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJSONData.swift; sourceTree = "<group>"; };
+		52437BD3206909FF00E0A378 /* Fetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetch.swift; sourceTree = "<group>"; };
+		52437BD520690CCE00E0A378 /* mock-api-incorrect-response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "mock-api-incorrect-response.json"; sourceTree = "<group>"; };
+		52437BD820690E9700E0A378 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		52437BDA2069101E00E0A378 /* Foundation+URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+URLSession.swift"; sourceTree = "<group>"; };
+		52437BDC2069114300E0A378 /* Foundation+URLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+URLSessionDataTask.swift"; sourceTree = "<group>"; };
+		52437BDE206911CF00E0A378 /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
 		52DEF66B2068EC28008FFBB2 /* RestaurantSearchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantSearchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DEF66E2068EC28008FFBB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52DEF6732068EC28008FFBB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -104,6 +128,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52437BC72069051B00E0A378 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				52437BC82069052800E0A378 /* NetworkingTests.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		52437BCC2069060100E0A378 /* Fetching */ = {
+			isa = PBXGroup;
+			children = (
+				52437BCD2069060E00E0A378 /* FetchDelegate.swift */,
+				52437BCF2069083900E0A378 /* FetchError.swift */,
+				52437BD3206909FF00E0A378 /* Fetch.swift */,
+			);
+			path = Fetching;
+			sourceTree = "<group>";
+		};
+		52437BD720690DA000E0A378 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				52437BBF2068FA9B00E0A378 /* mock-api-response.json */,
+				52437BD520690CCE00E0A378 /* mock-api-incorrect-response.json */,
+				52437BDE206911CF00E0A378 /* MockURLSessionDataTask.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		52DEF6622068EC28008FFBB2 = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				52DEF6852068EC28008FFBB2 /* Info.plist */,
+				52DEF69D2068ECC1008FFBB2 /* Mocks */,
 				52DEF6AC2068EF33008FFBB2 /* Helpers */,
 				52DEF6BB2068F3D4008FFBB2 /* Modules */,
 			);
@@ -161,7 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				52DEF6BC2068F3EB008FFBB2 /* Model */,
-				52DEF69D2068ECC1008FFBB2 /* Mocks */,
 			);
 			path = SearchModule;
 			sourceTree = "<group>";
@@ -171,7 +223,11 @@
 			children = (
 				52DEF69E2068ED41008FFBB2 /* MockNetworking.swift */,
 				52437BB92068F68D00E0A378 /* MockAPIDetails.swift */,
-				52437BBF2068FA9B00E0A378 /* mock-api-response.json */,
+				52437BD720690DA000E0A378 /* JSON */,
+				52437BCA206905E700E0A378 /* MockNetworkingDelegate.swift */,
+				52437BD12069089A00E0A378 /* MockJSONData.swift */,
+				52437BD820690E9700E0A378 /* MockURLSession.swift */,
+				5216FCA22069178400D12E16 /* MockError.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -179,6 +235,7 @@
 		52DEF6A02068ED51008FFBB2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				52437BCC2069060100E0A378 /* Fetching */,
 				52DEF6AF2068EF6D008FFBB2 /* APIDetails */,
 				52DEF6A12068ED5E008FFBB2 /* Networking */,
 				52DEF6B42068EFEC008FFBB2 /* PlistDecoder.swift */,
@@ -191,6 +248,8 @@
 			isa = PBXGroup;
 			children = (
 				52DEF6A22068ED67008FFBB2 /* Networking.swift */,
+				52437BDA2069101E00E0A378 /* Foundation+URLSession.swift */,
+				52437BDC2069114300E0A378 /* Foundation+URLSessionDataTask.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -232,6 +291,7 @@
 		52DEF6AC2068EF33008FFBB2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				52437BC72069051B00E0A378 /* Networking */,
 				52DEF6AD2068EF3A008FFBB2 /* APIDetails */,
 			);
 			path = Helpers;
@@ -401,6 +461,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52437BD620690D6400E0A378 /* mock-api-incorrect-response.json in Resources */,
 				52437BC02068FA9B00E0A378 /* mock-api-response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,11 +484,16 @@
 				52DEF6BA2068F11C008FFBB2 /* APIDetailsErrors.swift in Sources */,
 				52DEF6B82068F028008FFBB2 /* APIDetails.swift in Sources */,
 				52DEF66F2068EC28008FFBB2 /* AppDelegate.swift in Sources */,
+				52437BDD2069114300E0A378 /* Foundation+URLSessionDataTask.swift in Sources */,
 				52437BC42068FDE400E0A378 /* APITokens.swift in Sources */,
 				52437BBE2068FA3200E0A378 /* RestaurantDomainItem.swift in Sources */,
 				52DEF6A82068EDD6008FFBB2 /* Restaurants.swift in Sources */,
+				52437BDB2069101E00E0A378 /* Foundation+URLSession.swift in Sources */,
+				52437BD02069083900E0A378 /* FetchError.swift in Sources */,
 				52437BBC2068F7B200E0A378 /* ModelState.swift in Sources */,
 				52DEF6B12068EF84008FFBB2 /* ZomatoAPI.swift in Sources */,
+				52437BD4206909FF00E0A378 /* Fetch.swift in Sources */,
+				52437BCE2069060E00E0A378 /* FetchDelegate.swift in Sources */,
 				52437BC22068FDC500E0A378 /* StandardAPIHeaders.swift in Sources */,
 				52DEF6A32068ED67008FFBB2 /* Networking.swift in Sources */,
 			);
@@ -439,7 +505,13 @@
 			files = (
 				52DEF6842068EC28008FFBB2 /* RestaurantsTests.swift in Sources */,
 				52437BBA2068F68D00E0A378 /* MockAPIDetails.swift in Sources */,
+				52437BCB206905E700E0A378 /* MockNetworkingDelegate.swift in Sources */,
+				52437BD920690E9700E0A378 /* MockURLSession.swift in Sources */,
+				52437BD22069089A00E0A378 /* MockJSONData.swift in Sources */,
 				52DEF6B32068EF91008FFBB2 /* ZomatoAPITests.swift in Sources */,
+				5216FCA32069178400D12E16 /* MockError.swift in Sources */,
+				52437BDF206911CF00E0A378 /* MockURLSessionDataTask.swift in Sources */,
+				52437BC92069052800E0A378 /* NetworkingTests.swift in Sources */,
 				52DEF69F2068ED41008FFBB2 /* MockNetworking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

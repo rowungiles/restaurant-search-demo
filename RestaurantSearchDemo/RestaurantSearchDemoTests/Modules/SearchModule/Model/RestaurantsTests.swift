@@ -76,8 +76,7 @@ final class RestaurantsTests: XCTestCase {
     
     func test_GivenSuccess_WhenSuccessfulFetchCalled_ThenReturnsRestaurantItems() {
         do {
-            let path = Bundle(for: RestaurantsTests.self).path(forResource: "mock-api-response", ofType: "json")!
-            let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+            let data = MockJSONData.correctResponseData()
             let result = try restaurants.successfulFetch(data: data)
         
             XCTAssertTrue(result.count == 1)
