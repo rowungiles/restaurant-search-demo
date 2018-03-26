@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>baseURL</key>
+	<string>https://developers.zomato.com</string>
+	<key>apiPath</key>
+	<string>/api</string>
+	<key>apiVersionPath</key>
+	<string>/v2.1</string>
+	<key>searchPath</key>
+	<string>/search</string>
+	<key>londonCityTypeDemoSearchQuery</key>
+	<string>?entity_id=61&amp;entity_type=city&amp;q=</string>
+</dict>
+</plist>
