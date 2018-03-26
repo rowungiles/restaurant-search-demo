@@ -19,16 +19,11 @@ final class ZomatoAPITests: XCTestCase {
         zomato = ZomatoAPI()
     }
     
-    func test_GivenQueryString_WhenURLWithQueryCalled_ThenReturnsURL() {
-        let url = try? zomato.urlWithQuery("")
-        XCTAssertNotNil(url)
-    }
-    
     func test_GivenNoQueryString_WhenURLWithQueryCalled_ThenThrows() {
         XCTAssertThrowsError(try zomato.urlWithQuery(nil))
     }
     
-    func test_WhenInitZomatoAPI_ThenInitsWithDataFromPlist() {
+    func test_WhenURLWithQueryCalled_ThenInitsWithExpectedValues() {
         let url = try! zomato.urlWithQuery("test")
         let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
         
@@ -36,6 +31,11 @@ final class ZomatoAPITests: XCTestCase {
         XCTAssertTrue(components?.host == "developers.zomato.com")
         XCTAssertTrue(components?.path == "/api/v2.1/search")
         XCTAssertTrue(components?.query == "entity_id=61&entity_type=city&q=test")
+    }
+    
+    func test_WhenURLWithQueryCalled_ThenDoesPercentageStringEscapeQuery() {
+        let url = try! zomato.urlWithQuery("test here")
+        XCTAssertTrue(url.query == "entity_id=61&entity_type=city&q=test%20here")
     }
     
     func test_WhenAdditionalHeadersCalled_ThenReturnsAdditionalHeaders() {
