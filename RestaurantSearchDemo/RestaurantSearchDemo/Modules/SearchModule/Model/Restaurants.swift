@@ -44,9 +44,9 @@ extension Restaurants {
         if let data = data {
             let response = try JSONDecoder().decode(RestaurantSearch.self, from: data)
             return response.restaurants.flatMap({ $0.values })
-        } else {
-            return [RestaurantSearch.RestaurantDomainItem]()
         }
+        
+        return [RestaurantSearch.RestaurantDomainItem]()
     }
     
     func dataFetchComplete(result: ModelState<[RestaurantSearch.RestaurantDomainItem]>) {
