@@ -11,7 +11,7 @@
 		52DEF6742068EC28008FFBB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DEF6722068EC28008FFBB2 /* Main.storyboard */; };
 		52DEF6762068EC28008FFBB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DEF6752068EC28008FFBB2 /* Assets.xcassets */; };
 		52DEF6792068EC28008FFBB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DEF6772068EC28008FFBB2 /* LaunchScreen.storyboard */; };
-		52DEF6842068EC28008FFBB2 /* RestaurantSearchDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DEF6832068EC28008FFBB2 /* RestaurantSearchDemoTests.swift */; };
+		52DEF6842068EC28008FFBB2 /* RestaurantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DEF6832068EC28008FFBB2 /* RestaurantsTests.swift */; };
 		52DEF68F2068EC28008FFBB2 /* RestaurantSearchDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DEF68E2068EC28008FFBB2 /* RestaurantSearchDemoUITests.swift */; };
 		52DEF69F2068ED41008FFBB2 /* MockNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DEF69E2068ED41008FFBB2 /* MockNetworking.swift */; };
 		52DEF6A32068ED67008FFBB2 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DEF6A22068ED67008FFBB2 /* Networking.swift */; };
@@ -49,7 +49,7 @@
 		52DEF6782068EC28008FFBB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52DEF67A2068EC28008FFBB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52DEF67F2068EC28008FFBB2 /* RestaurantSearchDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantSearchDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		52DEF6832068EC28008FFBB2 /* RestaurantSearchDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantSearchDemoTests.swift; sourceTree = "<group>"; };
+		52DEF6832068EC28008FFBB2 /* RestaurantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsTests.swift; sourceTree = "<group>"; };
 		52DEF6852068EC28008FFBB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52DEF68A2068EC28008FFBB2 /* RestaurantSearchDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantSearchDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DEF68E2068EC28008FFBB2 /* RestaurantSearchDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantSearchDemoUITests.swift; sourceTree = "<group>"; };
@@ -127,10 +127,9 @@
 		52DEF6822068EC28008FFBB2 /* RestaurantSearchDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				52DEF6AC2068EF33008FFBB2 /* Helpers */,
-				52DEF69C2068ECB2008FFBB2 /* RestaurantSearch */,
-				52DEF6832068EC28008FFBB2 /* RestaurantSearchDemoTests.swift */,
 				52DEF6852068EC28008FFBB2 /* Info.plist */,
+				52DEF6AC2068EF33008FFBB2 /* Helpers */,
+				52DEF6BB2068F3D4008FFBB2 /* Modules */,
 			);
 			path = RestaurantSearchDemoTests;
 			sourceTree = "<group>";
@@ -144,12 +143,14 @@
 			path = RestaurantSearchDemoUITests;
 			sourceTree = "<group>";
 		};
-		52DEF69C2068ECB2008FFBB2 /* RestaurantSearch */ = {
+		52DEF69C2068ECB2008FFBB2 /* SearchModule */ = {
 			isa = PBXGroup;
 			children = (
+				52DEF6832068EC28008FFBB2 /* RestaurantsTests.swift */,
+				52DEF6BC2068F3EB008FFBB2 /* Model */,
 				52DEF69D2068ECC1008FFBB2 /* Mocks */,
 			);
-			path = RestaurantSearch;
+			path = SearchModule;
 			sourceTree = "<group>";
 		};
 		52DEF69D2068ECC1008FFBB2 /* Mocks */ = {
@@ -243,6 +244,21 @@
 				52DEF6B92068F11C008FFBB2 /* APIDetailsErrors.swift */,
 			);
 			path = GenericAPISupport;
+			sourceTree = "<group>";
+		};
+		52DEF6BB2068F3D4008FFBB2 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				52DEF69C2068ECB2008FFBB2 /* SearchModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		52DEF6BC2068F3EB008FFBB2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,7 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52DEF6842068EC28008FFBB2 /* RestaurantSearchDemoTests.swift in Sources */,
+				52DEF6842068EC28008FFBB2 /* RestaurantsTests.swift in Sources */,
 				52DEF6B32068EF91008FFBB2 /* ZomatoAPITests.swift in Sources */,
 				52DEF69F2068ED41008FFBB2 /* MockNetworking.swift in Sources */,
 			);
