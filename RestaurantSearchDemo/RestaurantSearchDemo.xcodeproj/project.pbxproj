@@ -159,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				5216FCAF20691B3100D12E16 /* UIKit+Identifier.swift */,
+				52437BDA2069101E00E0A378 /* Foundation+URLSession.swift */,
+				52437BDC2069114300E0A378 /* Foundation+URLSessionDataTask.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -295,8 +297,6 @@
 			isa = PBXGroup;
 			children = (
 				52DEF6A22068ED67008FFBB2 /* Networking.swift */,
-				52437BDA2069101E00E0A378 /* Foundation+URLSession.swift */,
-				52437BDC2069114300E0A378 /* Foundation+URLSessionDataTask.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";

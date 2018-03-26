@@ -20,6 +20,10 @@ final class Networking<Delegate: FetchDelegate>: NetworkingInterface, Fetch {
     
     var customSession: URLSessionProtocol?
     
+    deinit {
+        customSession?.invalidateAndCancel()
+    }
+    
     func setDelegate(_ delegate: Delegate) {
         self.delegate = delegate
     }

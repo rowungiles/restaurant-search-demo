@@ -19,4 +19,6 @@ final class MockURLSession: URLSessionProtocol {
         
         return MockURLSessionDataTask()
     }
+    
+    func invalidateAndCancel() {}
 }
