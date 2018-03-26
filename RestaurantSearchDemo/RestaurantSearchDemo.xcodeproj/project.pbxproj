@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52437BBA2068F68D00E0A378 /* MockAPIDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BB92068F68D00E0A378 /* MockAPIDetails.swift */; };
+		52437BBC2068F7B200E0A378 /* ModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52437BBB2068F7B200E0A378 /* ModelState.swift */; };
 		52DEF66F2068EC28008FFBB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DEF66E2068EC28008FFBB2 /* AppDelegate.swift */; };
 		52DEF6742068EC28008FFBB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DEF6722068EC28008FFBB2 /* Main.storyboard */; };
 		52DEF6762068EC28008FFBB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DEF6752068EC28008FFBB2 /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		52437BB92068F68D00E0A378 /* MockAPIDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIDetails.swift; sourceTree = "<group>"; };
+		52437BBB2068F7B200E0A378 /* ModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelState.swift; sourceTree = "<group>"; };
 		52DEF66B2068EC28008FFBB2 /* RestaurantSearchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantSearchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DEF66E2068EC28008FFBB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52DEF6732068EC28008FFBB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,8 +117,8 @@
 		52DEF66D2068EC28008FFBB2 /* RestaurantSearchDemo */ = {
 			isa = PBXGroup;
 			children = (
-				52DEF6A42068EDC2008FFBB2 /* Modules */,
 				52DEF6A02068ED51008FFBB2 /* Helpers */,
+				52DEF6A42068EDC2008FFBB2 /* Modules */,
 				52DEF66E2068EC28008FFBB2 /* AppDelegate.swift */,
 				52DEF6722068EC28008FFBB2 /* Main.storyboard */,
 				52DEF6752068EC28008FFBB2 /* Assets.xcassets */,
@@ -146,7 +150,6 @@
 		52DEF69C2068ECB2008FFBB2 /* SearchModule */ = {
 			isa = PBXGroup;
 			children = (
-				52DEF6832068EC28008FFBB2 /* RestaurantsTests.swift */,
 				52DEF6BC2068F3EB008FFBB2 /* Model */,
 				52DEF69D2068ECC1008FFBB2 /* Mocks */,
 			);
@@ -157,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				52DEF69E2068ED41008FFBB2 /* MockNetworking.swift */,
+				52437BB92068F68D00E0A378 /* MockAPIDetails.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -167,6 +171,7 @@
 				52DEF6AF2068EF6D008FFBB2 /* APIDetails */,
 				52DEF6A12068ED5E008FFBB2 /* Networking */,
 				52DEF6B42068EFEC008FFBB2 /* PlistDecoder.swift */,
+				52437BBB2068F7B200E0A378 /* ModelState.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 		52DEF6BC2068F3EB008FFBB2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				52DEF6832068EC28008FFBB2 /* RestaurantsTests.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -401,6 +407,7 @@
 				52DEF6B82068F028008FFBB2 /* APIDetails.swift in Sources */,
 				52DEF66F2068EC28008FFBB2 /* AppDelegate.swift in Sources */,
 				52DEF6A82068EDD6008FFBB2 /* Restaurants.swift in Sources */,
+				52437BBC2068F7B200E0A378 /* ModelState.swift in Sources */,
 				52DEF6B12068EF84008FFBB2 /* ZomatoAPI.swift in Sources */,
 				52DEF6A32068ED67008FFBB2 /* Networking.swift in Sources */,
 			);
@@ -411,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52DEF6842068EC28008FFBB2 /* RestaurantsTests.swift in Sources */,
+				52437BBA2068F68D00E0A378 /* MockAPIDetails.swift in Sources */,
 				52DEF6B32068EF91008FFBB2 /* ZomatoAPITests.swift in Sources */,
 				52DEF69F2068ED41008FFBB2 /* MockNetworking.swift in Sources */,
 			);

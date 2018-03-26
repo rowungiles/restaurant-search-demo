@@ -8,16 +8,33 @@
 
 import Foundation
 
+protocol RestaurantsInterface {
+    var domainModel: ModelState<[Any]>? { get }
+    
+    func fetchRestaurants(with query: String?)
+    func cancelFetch()
+}
+
 final class Restaurants {
-    
+
+    private(set) var domainModel: ModelState<[Any]>?
+        
     private var networking: NetworkingInterface
+    private var apiDetails: APIDetails
     
-    init(networking: NetworkingInterface) {
+    init(networking: NetworkingInterface, apiDetails: APIDetails) {
         self.networking = networking
+        self.apiDetails = apiDetails
     }
         
     func fetchRestaurants() {
-        let url = URL(string: "https://zomato.com")!
-        networking.fetchData(for: url)
+        do {
+            let url = try apiDetails.urlWithQuery()
+            networking.cancelFetch()
+            networking.fetchData(for: url)
+            
+        } catch {
+            domainModel = .failure(error)
+        }
     }
 }

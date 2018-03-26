@@ -16,15 +16,15 @@ protocol PlistDecoder: Codable {}
 
 extension PlistDecoder {
     
-    static func plistData() -> Self? {
+    static func plistData() -> Self {
         guard let path = Bundle.main.path(forResource: String(describing: Self.self), ofType: DeviceConstants.plistExtension), let data = try? Data(contentsOf: URL(fileURLWithPath: path)) else {
-            return nil
+            fatalError("programmer error. plist is missing.")
         }
         
         let decoder = PropertyListDecoder()
         
         guard let provider = try? decoder.decode(Self.self, from: data) else {
-            return nil
+            fatalError("plist fields do not match object properties.")
         }
         
         return provider

@@ -1,5 +1,5 @@
 //
-//  Networking.swift
+//  ModelState.swift
 //  RestaurantSearchDemo
 //
 //  Created by Rowun Giles on 26/03/2018.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol NetworkingInterface {
-    func fetchData(for url: URL)
-    func cancelFetch()
+enum ModelState<T> {
+    case success(T)
+    case failure(Error)
 }

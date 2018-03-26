@@ -14,8 +14,14 @@ final class MockNetworking: NetworkingInterface {
     var fetchDataCalled = 0
     var capturedURL: URL?
     
+    var cancelFetchCalled = 0
+    
     func fetchData(for url: URL) {
         fetchDataCalled += 1
         capturedURL = url
+    }
+    
+    func cancelFetch() {
+        cancelFetchCalled += 1
     }
 }

@@ -12,12 +12,8 @@ import XCTest
 final class ZomatoAPITests: XCTestCase {
     
     func test_WhenURLWithQueryCalled_ThenReturnsURL() {
-        let zomatoAPI = ZomatoAPI()
-        
-        guard let zomato = zomatoAPI else {
-            return XCTFail("zomatoAPI did not init correctly")
-        }
-        
+        let zomato = ZomatoAPI()
+
         XCTAssertNoThrow(try zomato.urlWithQuery())
         
         let url = try? zomato.urlWithQuery()
@@ -27,7 +23,7 @@ final class ZomatoAPITests: XCTestCase {
     func test_WhenInitZomatoAPI_ThenInitsWithDataFromPlist() {
         let zomato = ZomatoAPI()
         
-        let url = try! zomato!.urlWithQuery()
+        let url = try! zomato.urlWithQuery()
         let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
         
         XCTAssertTrue(components?.scheme == "https")
